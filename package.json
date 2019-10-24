@@ -1,0 +1,14 @@
+{
+  "name": "selenium_course",
+  "version": "1.0.0",
+  "description": "Selenium training course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "D Dundych",
+  "license": "ISC",
+  "devDependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
+}
