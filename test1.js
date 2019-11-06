@@ -5,14 +5,12 @@ let driver = new webdriver.Builder()
     .setChromeOptions(/* ... */)
     .build();
 
-// Test Hello World
+// Test Google Hello World
 
-driver.get('http://www.google.com').then(function(){
+driver.get('http://www.google.com').then(function () {
     return driver.findElement(webdriver.By.xpath("//*[@name='q']")).sendKeys('hello world', webdriver.Key.RETURN);
-}).then(function(){
+}).then(function () {
     return driver.wait(webdriver.until.titleContains('hello world'), 1000);
-}).then(function(){
+}).then(function () {
     return driver.quit();
 });
-
-
