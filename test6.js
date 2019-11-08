@@ -91,10 +91,12 @@ async function mFindClaimClaim(driver) {
     await driver.get('https://miniaylo.finance.ua/')
 
     await mClaim(driver);
+
     await mFindClaimClaim(driver);
+
 
     console.log("\n---SUCCESS---\n");
 
-    await driver.sleep(10 * 1000);
+
     await driver.quit();
 })();

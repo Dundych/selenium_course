@@ -11,6 +11,6 @@ function finished() {
     }, 1000);
     
 }
-doHomework('math');
-finished();
-// doHomework('math', finished);
+// doHomework('math');
+// finished();
+doHomework('math', finished);

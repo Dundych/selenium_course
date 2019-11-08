@@ -32,10 +32,10 @@ doCleenup(4);
 //     )
 // );
 
-// doHomework('math', 6, function () {
-//     doRest(3, function () {
-//         doHomework('english', 6, function () {
-//             doCleenup(4);
-//         })
-//     })
-// });
+doHomework('math', 6, function () {
+    doRest(3, function () {
+        doHomework('english', 6, function () {
+            doCleenup(4);
+        })
+    })
+});

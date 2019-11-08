@@ -40,7 +40,7 @@ async function gmaps(driver, search_obj) {
             .press()
             .release()
             .perform();
-        await driver.sleep(3 * 1000);
+        await driver.sleep(5 * 1000);
     } else {
         throw `Error: param 'search_obj' should has a key 'text' or 'coords'`
     }
@@ -50,6 +50,7 @@ async function gmaps(driver, search_obj) {
     let elDriveTime = driver.findElement(elDriveTimeLoc);
     let drTime = await elDriveTime.getText();
     console.log(`Actual drive time from point ${JSON.stringify(search_obj)} to Kyiv - ${drTime}`)
+    await driver.sleep(10 * 1000);
 
     console.log(`\n${arguments.callee.name} - OK`)
 }

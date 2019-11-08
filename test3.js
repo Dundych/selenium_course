@@ -4,7 +4,7 @@ const assert = require('assert');
 // Test Sinoptik 10 days
 
 
-(async function sinoptik_example() {
+async function sinoptikExample() {
     let driver =  await new Builder().forBrowser('chrome').setChromeOptions(/* ... */).build();
 
     await driver.get('https://ua.sinoptik.ua')
@@ -27,4 +27,6 @@ const assert = require('assert');
     await driver.quit();
 
     console.log("\n---SUCCESS---\n")
-})();
+}
+
+sinoptikExample();

@@ -1,9 +1,9 @@
-let promise = new Promise(function (resolve, reject) {
-    if ("Hypotetic error condition" == 1) {
-        return reject(new Error("Some Error"));
-    }
-    setTimeout(() => resolve("done!"), 1000);
-});
+// let promise = new Promise(function (resolve, reject) {
+//     if ("Hypotetic error condition" == 1) {
+//         return reject(new Error("Some Error"));
+//     }
+//     setTimeout(() => resolve("done!"), 1000);
+// });
 
 // promise.then(function(res){
 //     console.log(res);
@@ -16,7 +16,6 @@ let promise = new Promise(function (resolve, reject) {
 // }).catch((err)=> {
 //     console.error(err);
 // });
-
 
 
 function doHomeworkPromise(subject, sec) {
@@ -47,15 +46,37 @@ function doCleenupPromise(sec) {
 
 
 
-doHomeworkPromise('math', 6).then((hwRes) => {
-    console.log(hwRes);
-    doRestPromise(3).then((rRes) => {
+// doHomeworkPromise('math', 6).then((hwRes) => {
+//     console.log(hwRes);
+//     doRestPromise(3).then((rRes) => {
+//         console.log(rRes);
+//         doHomeworkPromise('english', 6).then((hw2Res) => {
+//             console.log(hw2Res);
+//             doCleenupPromise(4).then((cRes) => {
+//                 console.log(cRes);
+//             });
+//         });
+//     });
+// });
+
+//Chaining promices
+doHomeworkPromise('math', 6)
+    .then((hwRes) => {
+        console.log(hwRes);
+        return doRestPromise(3);
+    })
+    .then((rRes) => {
         console.log(rRes);
-        doHomeworkPromise('english', 6).then((hw2Res) => {
-            console.log(hw2Res);
-            doCleenupPromise(4).then((cRes) => {
-                console.log(cRes);
-            });
-        });
+        return doHomeworkPromise('english', 6);
+    })
+    .then((hwRes) => {
+        console.log(hwRes);
+        return doRestPromise(3);
+    })
+    .then((hw2Res) => {
+        console.log(hw2Res);
+        return doCleenupPromise(4);
+    })
+    .then((cRes) => {
+        console.log(cRes);
     });
-});
