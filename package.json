@@ -8,7 +8,28 @@
   },
   "author": "D Dundych",
   "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^5.16.7",
+    "casperjs": "^1.1.4",
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.4",
+    "jasmine": "^3.5.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "jest": "^24.9.0",
+    "mocha": "^6.2.2",
+    "nightmare": "^3.0.2",
+    "nightwatch": "^1.2.4",
+    "protractor": "^5.4.2",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "slimerjs": "^1.0.0"
+  },
   "devDependencies": {
-    "selenium-webdriver": "^4.0.0-alpha.5"
+    "@wdio/local-runner": "^5.16.7",
+    "@wdio/mocha-framework": "^5.16.5",
+    "@wdio/selenium-standalone-service": "^5.16.5",
+    "@wdio/spec-reporter": "^5.16.5",
+    "@wdio/sync": "^5.16.5",
+    "chromedriver": "^78.0.1",
+    "wdio-chromedriver-service": "^5.0.2"
   }
 }
